@@ -11,6 +11,7 @@ using namespace std;
 
 
 int main() {
+  
 
   //initializing char arrays                                           
   char start[81];
@@ -22,7 +23,7 @@ int main() {
   cin.get(start, 81);//Reads str 80  characters + terminating character
      
   for(int i = 0; i < 81; i++) {
-    if(start[i] != ' ') {
+    if(start[i] != ' ' && ispunct(start[i]) != true) {
       nospace[counter] = start[i];
       counter++;
     }
@@ -53,6 +54,6 @@ int main() {
   }
   else {
     cout <<  "That is not a palindrome" << endl;
-  }
+    }
   return 0;
 }
